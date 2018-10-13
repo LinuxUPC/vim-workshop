@@ -7,7 +7,7 @@ run: slides.pdf
 	okular slides.pdf
 
 clean:
-	rm slides.aux  slides.log  slides.nav  slides.out slides.snm slides.toc  slides.vrb
+	rm -f slides.aux  slides.log  slides.nav  slides.out slides.snm slides.toc  slides.vrb
 
 ultraclean:
-	rm slides.aux slides.pdf slides.log  slides.nav  slides.out slides.snm slides.toc  slides.vrb
+	rm -f slides.aux slides.pdf slides.log  slides.nav  slides.out slides.snm slides.toc  slides.vrb
