@@ -1,56 +1,54 @@
-
-
 \documentclass{beamer}
 
 \mode<presentation> {
 
-% The Beamer class comes with a number of default slide themes
-% which change the colors and layouts of slides. Below this is a list
-% of all the themes, uncomment each in turn to see what they look like.
+  % The Beamer class comes with a number of default slide themes
+  % which change the colors and layouts of slides. Below this is a list
+  % of all the themes, uncomment each in turn to see what they look like.
 
-%\usetheme{default}
-%\usetheme{AnnArbor}
-%\usetheme{Antibes}
-%\usetheme{Bergen}
-%\usetheme{Berkeley}
-%\usetheme{Berlin}
-%\usetheme{Boadilla}
-%\usetheme{CambridgeUS}
-%\usetheme{Copenhagen}
-%\usetheme{Darmstadt}
-%\usetheme{Dresden}
-%\usetheme{Frankfurt}
-%\usetheme{Goettingen}
-%\usetheme{Hannover}
-%\usetheme{Ilmenau}
-%\usetheme{JuanLesPins}
-%\usetheme{Luebeck}
-\usetheme{Madrid}
-%\usetheme{Malmoe}
-%\usetheme{Marburg}
-%\usetheme{Montpellier}
-%\usetheme{PaloAlto}
-%\usetheme{Pittsburgh}
-%\usetheme{Rochester}
-%\usetheme{Singapore}
-%\usetheme{Szeged}
-%\usetheme{Warsaw}
+  %\usetheme{default}
+  %\usetheme{AnnArbor}
+  %\usetheme{Antibes}
+  %\usetheme{Bergen}
+  %\usetheme{Berkeley}
+  %\usetheme{Berlin}
+  %\usetheme{Boadilla}
+  %\usetheme{CambridgeUS}
+  %\usetheme{Copenhagen}
+  %\usetheme{Darmstadt}
+  %\usetheme{Dresden}
+  %\usetheme{Frankfurt}
+  %\usetheme{Goettingen}
+  %\usetheme{Hannover}
+  %\usetheme{Ilmenau}
+  %\usetheme{JuanLesPins}
+  %\usetheme{Luebeck}
+  \usetheme{Madrid}
+  %\usetheme{Malmoe}
+  %\usetheme{Marburg}
+  %\usetheme{Montpellier}
+  %\usetheme{PaloAlto}
+  %\usetheme{Pittsburgh}
+  %\usetheme{Rochester}
+  %\usetheme{Singapore}
+  %\usetheme{Szeged}
+  %\usetheme{Warsaw}
 
 
-%\usecolortheme{albatross}
-%\usecolortheme{beaver}
-%\usecolortheme{beetle}
-%\usecolortheme{crane}
-%\usecolortheme{dolphin}
-%\usecolortheme{dove}
-%\usecolortheme{fly}
-%\usecolortheme{lily}
-%\usecolortheme{orchid}
-%\usecolortheme{rose}
-%\usecolortheme{seagull}
-%\usecolortheme{seahorse}
-%\usecolortheme{whale}
-%\usecolortheme{wolverine}
+  %\usecolortheme{albatross}
+  %\usecolortheme{beaver}
+  %\usecolortheme{beetle}
+  %\usecolortheme{crane}
+  %\usecolortheme{dolphin}
+  %\usecolortheme{dove}
+  %\usecolortheme{fly}
+  %\usecolortheme{lily}
+  %\usecolortheme{orchid}
+  %\usecolortheme{rose}
+  %\usecolortheme{seagull}
+  %\usecolortheme{seahorse}
+  %\usecolortheme{whale}
+  %\usecolortheme{wolverine}
 }
 
 \usepackage{graphicx} 
@@ -61,72 +59,71 @@
 
 \captionsetup[figure]{labelformat=empty}
 \graphicspath{{./graphics/}}
+
+\AtBeginSection[]
+  {
+     \begin{frame}<beamer>
+     \frametitle{Outline}
+     \tableofcontents[currentsection]
+     \end{frame}
+  }
 %----------------------------------------------------------------------------------------
-%	TITLE PAGE
+%       TITLE PAGE
 %----------------------------------------------------------------------------------------
-\AtBeginSection[]{
-  \begin{frame}
-  \vfill
-  \centering
-  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
-    \usebeamerfont{title}\insertsectionhead\par%
-  \end{beamercolorbox}
-  \vfill
-  \end{frame}
-}
+
 \title[Vim workshop]{Vim workshop} 
 
 \author{Joan V. and Guillem R.}
 \institute[LinuxUPC]
 {
-LinuxUPC \\
-\medskip
-\textit{linuxupc AT linuxupc.upc.edu} 
+  LinuxUPC \\
+  \medskip
+  \textit{linuxupc AT linuxupc.upc.edu} 
 }
 \date{\today} 
 
 \begin{document}
 
 \begin{frame}
-\titlepage
+  \titlepage
 \end{frame}
 
 \begin{frame}
-\frametitle{Overview} 
-\tableofcontents 
+  \frametitle{Outline} 
+  \tableofcontents 
 \end{frame}
 
 %----------------------------------------------------------------------------------------
-%	PRESENTATION SLIDES
+%       PRESENTATION SLIDES
 %----------------------------------------------------------------------------------------
 %------------------------------------------------
 \section{Background}
 %------------------------------------------------
 \subsection{Exiting Vim}
 \begin{frame}{Exiting Vim}
-\begin{figure}
-\centering
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=.9\linewidth]{exiting_vim.png}
-\end{subfigure}%
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=.9\linewidth]{vim_meme.jpeg}
-\end{subfigure}
-\caption{Source: \url{https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/}}
-\end{figure}
+  \begin{figure}
+    \centering
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=.9\linewidth]{exiting_vim.png}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+      \centering
+      \includegraphics[width=.9\linewidth]{vim_meme.jpeg}
+    \end{subfigure}
+    \caption{Source: \url{https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/}}
+  \end{figure}
 \end{frame}
 
 \subsection{Some data}
 \begin{frame}{Who uses Vim?}
-    \begin{itemize}
-        \item Most popular editor in 2006 in Linux Journal readers.
-        \item Third most popular editor in 2016 in Stack Overflow
-        \item Fifth most popular editor nowadays in Stack Overflow.
-        \item 40\% of sysadmins stackoverflow users use Vim.
-    \end{itemize}
-    \text{Vim is not just for nosaltgic nerds!}
+  \begin{itemize}
+    \item Most popular editor in 2006 in Linux Journal readers.
+    \item Third most popular editor in 2016 in Stack Overflow
+    \item Fifth most popular editor nowadays in Stack Overflow.
+    \item 40\% of sysadmins stackoverflow users use Vim.
+  \end{itemize}
+  \text{Vim is not just for nosaltgic nerds!}
 \end{frame}
 %------------------------------------------------
 \section{Introduction to Vim}
@@ -135,40 +132,50 @@ LinuxUPC \\
 \subsection{What is Vim} 
 
 \begin{frame}
-\frametitle{What is VIM?}
-Vim is a terminal-based text editor oriented to programmers with highly eficiency writting.
-\begin{figure}
-\includegraphics[width=0.8\linewidth]{vimscreenshot.png}
-\end{figure}
+  \frametitle{What is VIM?}
+  Vim is a terminal-based text editor oriented to programmers with highly eficiency writting.
+  \begin{figure}
+    \includegraphics[width=0.8\linewidth]{vimscreenshot.png}
+  \end{figure}
 \end{frame}
 
 %------------------------------------------------
 \subsection{Vim features}
 \begin{frame}
-\frametitle{Vim features}
-\begin{itemize}
-\item Keyboard focused.
-\item Text autocompletition 
-\item Terminal multiplexed
-\item More than 200 default key commands.
-\item Highly configurable
-\item Programmer focused
-\item Modes for implementing diferent functions
-\end{itemize}
+  \frametitle{Vim features}
+  \begin{itemize}
+    \item Keyboard focused.
+    \item Text autocompletition 
+    \item Terminal multiplexed
+    \item More than 200 default key commands.
+    \item Highly configurable
+    \item Programmer focused
+    \item Modes for implementing diferent functions
+  \end{itemize}
 \end{frame}
 %------------------------------------------------
 \subsection{Modes}
 \begin{frame}
-\frametitle{Modes}
-Vim has 3 main modes with its variations:
-\begin{block}{Insert mode}
-Mainly we will enter this mode with the key i from normal mode. In this mode any character key we pressed will be inserted on the place of the cursor.
-\end{block}
-\begin{block}{Normal mode}
-This is the default mode of vim. When you start up vim you are in this mode. In this mode you can type several commands to change to other modes,move efitienly the cursor, paste, etc..
-\end{block}
-\begin{block}{Visual mode}
-In this mode, wich have several variations you can select text to cut, copy, replace. Its variations consists in the way you select code, for ex: Visual line will be selecting line by line while visual will be selecting character by character.
-\end{block}
-\end{frame}
+  \frametitle{Modes}
+  Vim has 3 main modes with its variations:
+  \begin{block}{Insert mode}
+    Mainly we will enter this mode with the key i from normal mode. In this mode any character key we pressed will be inserted on the place of the cursor.
+  \end{block}
+  \begin{block}{Normal mode}
+    This is the default mode of vim. When you start up vim you are in this mode. In this mode you can type several commands to change to other modes,move efitienly the cursor, paste, etc..
+  \end{block}
+  \begin{block}{Visual mode}
+    In this mode, wich have several variations you can select text to cut, copy, replace. Its variations consists in the way you select code, for ex: Visual line will be selecting line by line while visual will be selecting character by character.
+  \end{block}
+  \end{frame}
+  %--------------- movement ------------------------
+  \section{Moving in Vim}
+  \begin{frame}
+    \frametitle{Moving in vim (intro)}
+    Not so complicated.
+    \begin{figure}
+      \includegraphics[width=0.8\linewidth]{movement.png}
+    \end{figure}
+   \end{frame}
 \end{document} 
+
