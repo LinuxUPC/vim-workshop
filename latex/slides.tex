@@ -55,8 +55,10 @@
 \usepackage{booktabs} 
 \usepackage{hyperref}
 \usepackage{caption}
+\usepackage{subfig}
 \usepackage{subcaption}
 
+\captionsetup[subfigure]{labelformat=empty}
 \captionsetup[figure]{labelformat=empty}
 \graphicspath{{./graphics/}}
 
@@ -101,18 +103,17 @@
 %------------------------------------------------
 \subsection{Exiting Vim}
 \begin{frame}{Exiting Vim}
-  \begin{figure}
+\begin{figure}[htp] 
     \centering
-    \begin{subfigure}{.5\textwidth}
-      \centering
-      \includegraphics[width=.9\linewidth]{exiting_vim.png}
-    \end{subfigure}%
-    \begin{subfigure}{.5\textwidth}
-      \centering
-      \includegraphics[width=.9\linewidth]{vim_meme.jpeg}
-    \end{subfigure}
-    \caption{Source: \url{https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/}}
-  \end{figure}
+    \subfloat{%
+        \includegraphics[width=0.4\textwidth]{exiting_vim.png}%
+    }%
+    \hfill%
+    \subfloat{%
+        \includegraphics[width=0.4\textwidth]{vim_meme.jpeg}%
+    }%
+        \caption{Source: \url{https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/}}
+    \end{figure}
 \end{frame}
 
 \subsection{Some data}
@@ -172,10 +173,38 @@
   \section{Moving in Vim}
   \begin{frame}
     \frametitle{Moving in vim (intro)}
-    Not so complicated.
-    \begin{figure}
+  Moving the cursor arround the screen in Normal mode can be performed in many ways. 
+  \begin{figure}
       \includegraphics[width=0.8\linewidth]{movement.png}
     \end{figure}
-   \end{frame}
-\end{document} 
+  \end{frame}
+  \subsection{Basic moving}
+  \begin{frame}{Basic moving}
+    \begin{figure}[htp] 
+    \centering
+    \subfloat[Vim moving]{%
+        \includegraphics[width=0.4\textwidth]{hjkl_movement.png}%
+       
+        }%
+    VS
+    \subfloat[Clasic moving]{%
+        \includegraphics[width=0.4\textwidth]{arrowKeys.png}%
+    }%
+    \end{figure}
+  \end{frame}
+  \subsection{Moving keystrokes}
+  \begin{frame}{Moving keystrokes(1)}
+\begin{center}
+\begin{tabular}{ |c|c|c| } 
+ \hline
+ Command & Explanation \\ \hline
+ h j k l & moving arround as arrow keys \\ \hline
+ w b & next and last word  \\ \hline
+\end{tabular}
+\end{center}
 
+
+      
+  \end{frame}
+    
+\end{document} 
