@@ -62,12 +62,12 @@
 
 
 \AtBeginSection[]
-  {
-     \begin{frame}<beamer>
-     \frametitle{Outline}
-     \tableofcontents[currentsection]
-     \end{frame}
-  }
+{
+  \begin{frame}<beamer>
+    \frametitle{Outline}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
 %----------------------------------------------------------------------------------------
 %       TITLE PAGE
 %----------------------------------------------------------------------------------------
@@ -102,17 +102,17 @@
 %------------------------------------------------
 \subsection{Exiting Vim}
 \begin{frame}{Exiting Vim}
-\begin{figure}[htp] 
+  \begin{figure}[htp] 
     \centering
     \subfloat{%
-        \includegraphics[width=0.4\textwidth]{graphics/exiting_vim.png}%
-    }%
-    \hfill%
-    \subfloat{%
+      \includegraphics[width=0.4\textwidth]{graphics/exiting_vim.png}%
+      }%
+      \hfill%
+      \subfloat{%
         \includegraphics[width=0.4\textwidth]{graphics/vim_meme.jpeg}%
-    }%
+        }%
         \caption{Source: \url{https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/}}
-    \end{figure}
+  \end{figure}
 \end{frame}
 
 \subsection{Some data}
@@ -167,67 +167,79 @@
   \begin{block}{Visual mode}
     In this mode, wich have several variations you can select text to cut, copy, replace. Its variations consists in the way you select code, for ex: Visual line will be selecting line by line while visual will be selecting character by character.
   \end{block}
-  \end{frame}
-  %--------------- movement ------------------------
-  \section{Moving in Vim}
-  \begin{frame}
-    \frametitle{Moving in vim (intro)}
+\end{frame}
+%--------------- movement ------------------------
+\section{Moving in Vim}
+\begin{frame}
+  \frametitle{Moving in vim (intro)}
   Moving the cursor arround the screen in Normal mode can be performed in many ways. 
   \begin{figure}
-      \includegraphics[width=0.8\linewidth]{graphics/movement.png}
-    \end{figure}
-  \end{frame}
-  \subsection{Basic moving}
-  \begin{frame}{Basic moving}
-    \begin{figure}[htp] 
+    \includegraphics[width=0.8\linewidth]{graphics/movement.png}
+  \end{figure}
+\end{frame}
+\subsection{Basic moving}
+\begin{frame}{Basic moving}
+  \begin{figure}[htp] 
     \centering
     \subfloat[Vim moving]{%
-        \includegraphics[width=0.4\textwidth]{graphics/hjkl_movement.png}%
-       
-        }%
-    VS
-    \subfloat[Clasic moving]{%
-        \includegraphics[width=0.4\textwidth]{graphics/arrowKeys.png}%
-    }%
-    \end{figure}
-  \end{frame}
-  \subsection{Moving keystrokes}
-  \begin{frame}{Moving keystrokes}
-  The most important commands for moving are:
-\begin{center}
-\begin{tabular}{ |c|c|c| } 
- \hline
- Command & Explanation \\ \hline
- h j k l & moving arround as arrow keys \\ \hline
- w b & next and last word  \\ \hline
- ( ) & moving arround paragraphs \\ \hline
- 0 \$ & first and last character of line \\ \hline
- \% & move to matching caracter (ex: [] () \{\}) \\ \hline
- gg G & move to the top and bottom of the file \\ \hline
-\end{tabular}
-\end{center}
+      \includegraphics[width=0.4\textwidth]{graphics/hjkl_movement.png}%
 
-For more commands, take a look at the cheat-sheet!
- \end{frame}
+      }%
+      VS
+      \subfloat[Clasic moving]{%
+        \includegraphics[width=0.4\textwidth]{graphics/arrowKeys.png}%
+        }%
+  \end{figure}
+\end{frame}
+\subsection{Moving keystrokes}
+\begin{frame}{Moving keystrokes}
+  The most important commands for moving are:
+  \begin{center}
+    \begin{tabular}{ |c|c|c| } 
+      \hline
+      Command & Explanation \\ \hline
+      h j k l & moving arround as arrow keys \\ \hline
+      w b & next and last word  \\ \hline
+      ( ) & moving arround paragraphs \\ \hline
+      0 \$ & first and last character of line \\ \hline
+      \% & move to matching caracter (ex: [] () \{\}) \\ \hline
+      gg G & move to the top and bottom of the file \\ \hline
+    \end{tabular}
+  \end{center}
+
+  For more commands, take a look at the cheat-sheet!
+\end{frame}
 
 \section{Insert mode}
+\begin{frame}{What is insert mode?}
+  \begin{figure}[htp] 
+    \centering
+    \subfloat[Modern editors]{%
+      \includegraphics[width=0.5\textwidth]{graphics/atom.jpg}%
+
+      }%
+      \subfloat[Vim insert mode]{%
+        \includegraphics[width=0.4\textwidth]{graphics/nopointer.png}%
+        }%
+  \end{figure}
+\end{frame}
 \begin{frame}{Entering insert mode}
-     There are different ways to enter insert mode which will position the cursor diferently:
-     \begin{center}
-\begin{tabular}{ |c|c|c| } 
- \hline
- Command & Explanation \\ \hline
-i & insert before the cursor \\ \hline
-I & insert at the begining of the line \\ \hline
-a & insert after the cursor \\ \hline
-A & insert at the end of the line \\ \hline
-o & insert at the line bellow (ex: [] () \{\}) \\ \hline
-O & insert at the line above \\ \hline
-ea & insert at the end of the current word \\ \hline
-Esc & exit insert mode \\ \hline
-\end{tabular}
-\end{center}
- \end{frame}     
-    
+  There are different ways to enter insert mode which will position the cursor diferently:
+  \begin{center}
+    \begin{tabular}{ |c|c|c| } 
+      \hline
+      Command & Explanation \\ \hline
+      i & insert before the cursor \\ \hline
+      I & insert at the begining of the line \\ \hline
+      a & insert after the cursor \\ \hline
+      A & insert at the end of the line \\ \hline
+      o & insert at the line bellow (ex: [] () \{\}) \\ \hline
+      O & insert at the line above \\ \hline
+      ea & insert at the end of the current word \\ \hline
+      Esc & exit insert mode \\ \hline
+    \end{tabular}
+  \end{center}
+\end{frame}     
+
 \end{document} 
 
